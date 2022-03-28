@@ -1,25 +1,25 @@
 @font-face {
     font-family: "Niguella";
-    src: url("/fonts/niguella-webfont.woff2") format("woff2"),
-            url("/fonts/niguella-webfont.woff") format("woff");
+    src: url("../fonts/niguella-webfont.woff2") format("woff2"),
+            url("../fonts/niguella-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "Poppins regular";
-    src: url("/fonts/poppins-regular-webfont.woff2") format("woff2"),
-            url("/fonts/poppins-regular-webfont.woff") format("woff");
+    src: url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-regular-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "Poppins italic";
-    src: url("/fonts/poppins-italic-webfont.woff2") format("woff2"),
-            url("/fonts/poppins-italic-webfont.woff") format("woff");
+    src: url("../fonts/poppins-italic-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-italic-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "Poppins bold";
-    src: url("/fonts/poppins-bold-webfont.woff2") format("woff2"),
-            url("/fonts/poppins-bold-webfont.woff") format("woff");
+    src: url("../fonts/poppins-bold-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-bold-webfont.woff") format("woff");
 }
 
 * {
@@ -76,25 +76,25 @@ nav ul {
 
 .logo {
     display: block;
-    height: 100px;
+    height: 10vh;
 }
 
 .cadre {
     display: flex;
     flex-direction: column;
     border: #000000 solid 2px;
-    width: 85%;
+    width: 90%;
     height: 80%;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
 }
 
 .contenu {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: 75%;
+    height: 30vw;
 }
 
 .import {
@@ -103,8 +103,8 @@ nav ul {
     justify-content: center;
     align-items: center;
     border: #000000 solid 1px;
-    height: 33vw;
-    width: 33vw;
+    height: 30vw;
+    width: 30vw;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -113,8 +113,8 @@ nav ul {
     position: absolute;
     opacity: 0;
     z-index: 10;
-    width: 35%;
-    height: 60%;
+    width: 30vw;
+    height: 30vw;
     cursor: pointer;
 }
 
@@ -150,8 +150,8 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 33vw;
-    width: 33vw;
+    height: 30vw;
+    width: 30vw;
 }
 
 .info input {

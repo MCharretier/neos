@@ -1,25 +1,25 @@
 @font-face {
     font-family: "Niguella";
-    src: url("/fonts/niguella-webfont.woff2") format("woff2"),
-            url("/fonts/niguella-webfont.woff") format("woff");
+    src: url("../fonts/niguella-webfont.woff2") format("woff2"),
+            url("../fonts/niguella-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "Poppins regular";
-    src: url("/fonts/poppins-regular-webfont.woff2") format("woff2"),
-            url("/fonts/poppins-regular-webfont.woff") format("woff");
+    src: url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-regular-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "Poppins italic";
-    src: url("/fonts/poppins-italic-webfont.woff2") format("woff2"),
-            url("/fonts/poppins-italic-webfont.woff") format("woff");
+    src: url("../fonts/poppins-italic-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-italic-webfont.woff") format("woff");
 }
 
 @font-face {
     font-family: "Poppins bold";
-    src: url("/fonts/poppins-bold-webfont.woff2") format("woff2"),
-            url("/fonts/poppins-bold-webfont.woff") format("woff");
+    src: url("../fonts/poppins-bold-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-bold-webfont.woff") format("woff");
 }
 
 * {
@@ -82,7 +82,7 @@ a {
 
 .logo {
     display: block;
-    height: 100px;
+    height: 10vh;
 }
 
 .cadre {
