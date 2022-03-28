@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/post.css">
+    <link rel="stylesheet" href="../style/crea_post.css">
     <title>Accueil</title>
 </head>
 <body>
@@ -40,7 +40,7 @@
                         <input type="file" class="select">
                         <p>Importer votre NFT</p>
                         <img src="../img/icone/plus.svg" alt="Importer votre NFT">
-                        <div class="fake">Sélectionner</div>
+                        <div class="fake"><p>Sélectionner</p></div>
                     </div>
 
                     <div class="info">
@@ -60,3 +60,10 @@
     
 </body>
 </html>
+
+<?php
+}
+    else {
+        header('Location: ../index.php');
+    }
+?>

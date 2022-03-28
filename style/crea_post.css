@@ -113,6 +113,7 @@ nav ul {
     z-index: 10;
     width: 35%;
     height: 60%;
+    cursor: pointer;
 }
 
 p {
@@ -121,15 +122,25 @@ p {
     color: rgba(0,0,0, 0.7);
 }
 
+.import img {
+    margin: 2vw;
+}
+
 .fake {
+    display: flex;
     background-color: #119DA4;
     width: 30%;
-    height: 5%;
+    height: 7%;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.fake p {
     color: #ffffff;
     font-family: 'Poppins';
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .info {
@@ -173,4 +184,5 @@ p {
     color: #ffffff;
     font-family: 'Poppins';
     font-size: 30px;
+    cursor: pointer;
 }

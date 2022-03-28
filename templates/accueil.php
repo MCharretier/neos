@@ -39,16 +39,18 @@
                 <div class="carousel">
 
                     <?php for($i=0; $i<5; $i++): ?> 
-                        <div class="post">
-                            <img class="nft" src="../img/nft/CloneX.png" alt="NFT">
-                            <div class="marge">
-                                <div class="text">
-                                    <img class="pp" src="../img/icone/photo_profil.svg" alt="photo de profil">
-                                    <p class="nom">CLONEX</p>
-                                    <p class="id">#12428</p>
+                        <a href="../templates/post.php">
+                            <div class="post">
+                                <img class="nft" src="../img/nft/CloneX.png" alt="NFT">
+                                <div class="marge">
+                                    <div class="text">
+                                        <img class="pp" src="../img/icone/photo_profil.svg" alt="photo de profil">
+                                        <p class="nom">CLONEX</p>
+                                        <p class="id">#12428</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     <?php endfor; ?>
 
                 </div>
