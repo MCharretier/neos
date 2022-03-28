@@ -93,10 +93,11 @@
                     <p class="titre">Collections</p>
 
                     <div class="nft">
-                        <img src="../img/nft/CloneX.png" alt="Nft de la collection CloneX" class="nft">
+
+                        <?php for($i=0; $i<5; $i++): ?> 
                         <img src="../img/nft/MekaVerse2.jpg" alt="Nft de la collection Mekaverse" class="nft">
-                        <img src="../img/nft/soulware.jpg" alt="Nft de la collection Soulware" class="nft">
-                        <img src="../img/nft/Unirexes2.jpg" alt="Nft de la collection Unirexes" class="nft">
+                        <?php endfor; ?>
+                        
                     </div>
 
                 </div>

@@ -94,10 +94,10 @@
 
                     </div>
 
-                    <div class="add">
-                        <p>Ajouter un commentaire...</p>
-                        <button>Publier</button>
-                    </div>
+                    <form action="" method="post" class="add">
+                        <input type="text" name="comment" placeholder="Ajouter un commentaire...">
+                        <button type="submit">Publier</button>
+                    </form>
 
                 </div>    
 
