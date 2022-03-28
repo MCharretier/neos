@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Niguella";
+    src: url("/fonts/niguella-webfont.woff2") format("woff2"),
+            url("/fonts/niguella-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins regular";
+    src: url("/fonts/poppins-regular-webfont.woff2") format("woff2"),
+            url("/fonts/poppins-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins italic";
+    src: url("/fonts/poppins-italic-webfont.woff2") format("woff2"),
+            url("/fonts/poppins-italic-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins bold";
+    src: url("/fonts/poppins-bold-webfont.woff2") format("woff2"),
+            url("/fonts/poppins-bold-webfont.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+html {
+    background-color: #f6f6f6;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    height: 100%;
+    width: 200px;
+    padding: 0 50px;
+}
+
+nav ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.barre {
+    border-top: solid 1px #000000;
+    width: 100px;
+}
+
+.corps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.logo {
+    display: block;
+    height: 100px;
+}
+
+.cadre {
+    display: flex;
+    border: #000000 solid 2px;
+    border-right: none;
+    width: 100%;
+    height: 40vw;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5vw;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    height: 170%;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform:rotate(-90deg);
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.post {
+    display: flex;
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    margin: calc(calc(calc(80vw - 5vw) - 60vw) / 4) 0;
+    transform:rotate(90deg);
+    justify-content: center;
+    align-items: center;
+}
+
+.nft {
+    height: 99%;
+    width: 99%;
+}
+
+.marge {
+    display: flex;
+    position: absolute;
+    right: 0;
+    background-color: #f6f6f6;
+    width: 40%;
+    height: 100%;
+    padding: 0.5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    background-color:  #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: #000000 solid 1px;
+    margin: 0.5vw;
+    padding: 0.5vw;
+}
+
+.pp {
+    height: 7%;
+    width: 20%;
+}
+
+.nom {
+    font-family: 'Niguella';
+    font-size: 4vw;
+    transform: rotate(-90deg) translate(0, -140%);
+    width: 23vw;
+    text-align: center;
+}
+
+.id {
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 1vw;
+}

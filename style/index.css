@@ -1,0 +1,490 @@
+@font-face {
+    font-family: "Niguella";
+    src: url("../fonts/niguella-webfont.woff2") format("woff2"),
+            url("../fonts/niguella-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins regular";
+    src: url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins italic";
+    src: url("../fonts/poppins-italic-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-italic-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Poppins bold";
+    src: url("../fonts/poppins-bold-webfont.woff2") format("woff2"),
+            url("../fonts/poppins-bold-webfont.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+html {
+    background-color: #000000;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../img/textures/back.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 100px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+div#webgl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logoaccueil {
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+
+.logo {
+    width: 400px;
+}
+
+.btn-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob {
+    position: relative;
+    color: #ffffff;
+    padding: 1rem 4rem;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2rem 2rem;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.blob:hover {
+    color: #000000;
+}
+
+.blob span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #ffffff;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.blob:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.blob span:nth-child(1) {
+    --n: 1;
+}
+
+.blob span:nth-child(2) {
+    --n: 2;
+}
+
+.blob span:nth-child(3) {
+    --n: 3;
+}
+
+.blob span:nth-child(4) {
+    --n: 4;
+}
+
+/* popup */
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 35vw;
+    max-width: 1600px;
+    height: 90vh;
+    max-height: 800px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    z-index: 5;
+    overflow: hidden;
+    transition: 1s;
+    opacity: 0;
+}
+
+.popup.active{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Ajouter tout le contenu de la popup (ex: .popup.active form#login, .popup.active input....) */
+.popup.active .form,
+.popup.active .close-btn,
+.popup.active h2,
+.popup.active .logo2,
+.popup.active input,
+.popup.active button,
+.popup.active label,
+.popup.active .barre,
+.popup.active .alert,
+.popup.active #form_login {
+    opacity: 1;
+    transition: opacity .5s;
+    transition-delay: 1s;
+}
+
+/* Mettre opacity:0 dans tout ce qui se trouve dans la popup */
+
+.form {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 77%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+}
+
+#form_login {
+    height: 50vh;
+    margin: 50px;
+}
+
+.close-btn {
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo2 {
+    opacity: 0;
+    width: 65%;
+    margin: 50px 0;
+}
+
+.form input {
+    opacity: 0;
+    height: 60px;
+    width: 27vw;
+    background: rgba(150, 150, 150, 0.2);
+    border-radius: 10px;
+    font-family: 'NiguellaDemo';
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 30px 20px;
+    border-style: none;
+}
+
+.alert {
+    opacity: 0;
+    font-family: 'Poppins bold';
+    font-size: 1rem;
+    width: 100%;
+    background: rgba(255,0,0, 0.2);
+    color:rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+    padding: 0.3rem 1rem;
+    margin: 0.1rem 0;
+}
+
+#login .alert {
+    margin: 0.5rem 0;
+}
+
+.msg_alert {
+    width:75%;
+}
+
+.form label {
+    opacity: 0;
+    font-family: 'Poppins regular';
+    font-size: 18px;
+    color: #000000;
+}
+
+.remind {
+    display: flex;
+    align-items: center;
+}
+
+#remind {
+    height: 20px;
+    width: 20px;
+    margin: 5px 15px;
+}
+
+#remind:checked {
+    background-color: #000000;
+}
+
+.form .btn {
+    opacity: 0;
+    height: 60px;
+    width: 27vw;
+    background: #119DA4;
+    border-radius: 10px;
+    font-family: 'NiguellaDemo';
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    align-items: center;
+    border-style: none;
+    cursor: pointer;
+}
+
+.form .btn2 {
+    opacity: 0;
+    height: 50px;
+    width: 200px;
+    background: rgba(17, 157, 164, 0.7);
+    border-radius: 5px;
+    font-family: 'NiguellaDemo';
+    letter-spacing: 1px;
+    font-size: 25px;
+    color: #ffffff;
+    align-items: center;
+    border-style: none;
+    cursor: pointer;
+}
+
+.form .barre {
+    opacity: 0;
+    border-bottom: 1px solid #000000;
+    width: 200px;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    body {
+        margin: 0;
+    }
+    .logo {
+        width: 300px;
+    }
+    
+}
+
+@media screen and (max-width: 1300px) {
+    .popup {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .logo {
+        width: 250px;
+    }
+
+    #connexion {
+        margin: 25px;
+    }
+
+    .form input {
+        font-size: 18px;
+    }
+
+    .form .btn {
+        font-size: 25px;
+    }
+
+    .form .btn2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .logo {
+        width: 200px;
+    }
+
+    .popup {
+        height: 70vh;
+        width: 400px;
+    }
+
+    .logo2 {
+        margin: 25px 0;
+    }
+
+    .form input {
+        width: 300px;
+    }
+
+    .form .btn {
+        width: 300px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    #remind{
+        margin: 5px 10px;
+    }
+
+    .alert {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .btn-list {
+        flex-direction: column;
+    }
+
+    .popup {
+        height: 65vh;
+        width: 350px;
+    }
+
+    .form {
+        margin: 0;
+        height: 50vh;
+    }
+
+    #connexion {
+        height: 45vh;
+    }
+
+    .form input {
+        width: 250px;
+        height: 50px;
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .form .btn {
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .form .btn2 {
+        font-size: 16px;
+    }
+
+    .form .barre {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 400px ) {
+
+    .popup {
+        height: 55vh;
+        width: 250px;
+    }
+
+    .form {
+        height: 40vh;
+    }
+
+    #connexion {
+        height: 35vh;
+    }
+
+    .form input {
+        width: 200px;
+        height: 40px;
+        padding: 0 20px;
+        font-size: 12px;
+    }
+
+    .form .btn {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .form .btn2 {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .retour {
+        height: 15px;
+        width: 15px;
+    }
+
+    .form label {
+        font-size: 10px;
+    }
+
+    #remind{
+        margin: 0 5px;
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    h1 {
+        font-size: 30px;
+        transition: 1s;
+    }
+
+    .blob {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
