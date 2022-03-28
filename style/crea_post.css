@@ -103,8 +103,10 @@ nav ul {
     justify-content: center;
     align-items: center;
     border: #000000 solid 1px;
-    height: 100%;
-    width: 45%;
+    height: 33vw;
+    width: 33vw;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .select {
@@ -148,8 +150,8 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    width: 45%;
+    height: 33vw;
+    width: 33vw;
 }
 
 .info input {
