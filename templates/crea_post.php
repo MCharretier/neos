@@ -33,11 +33,11 @@
 
             <img class="logo" src="../img/logo/logo_+_texte_noir.png" alt="Logo Neos">
 
-            <form action="" method="post" enctype="multipart/form-data" class="cadre">
+            <form action="" method="post" enctype="multipart/form-data" class="cadre" id="publication">
 
                 <div class="contenu">
                     <div class="import">
-                        <input type="file" class="select">
+                        <input type="file" name="file" id="file" class="select">
                         <p>Importer votre NFT</p>
                         <img src="../img/icone/plus.svg" alt="Importer votre NFT">
                         <div class="fake"><p>Sélectionner</p></div>
@@ -45,7 +45,7 @@
 
                     <div class="info">
                         <input type="text" name="name" class="name" placeholder="Nom du NFT">
-                        <input type="text" name="hastag" class="name" placeholder="Hastag du NFT">
+                        <input type="text" name="hashtag" class="name" placeholder="Hashtag du NFT">
                         <input type="text" name="description" class="description" placeholder="Description du NFT">
                     </div>
                 </div>
@@ -53,10 +53,11 @@
                 <button type="submit" class="publier">Publier</button>
 
             </form>
-
         </div>    
-
     </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/publication.js"></script>
     
 </body>
 </html>

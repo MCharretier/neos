@@ -88,7 +88,7 @@ if($_POST){
         $query->bindValue(4,hash("sha1",$password));
         $query->execute();
 
-        $query = $pdo->prepare("SELECT *  FROM users WHERE mail = ? AND password = ?");
+        $query = $pdo->prepare("SELECT * FROM users WHERE mail = ? AND password = ?");
         $query->bindValue(1, $mail);
         $query->bindValue(2,hash("sha1",$password));
         $query->execute();
@@ -98,6 +98,7 @@ if($_POST){
         $_SESSION['name'] = $user['nom'];
         $_SESSION['mail'] = $user['mail'];
         $_SESSION['pseudo'] = $user['pseudo'];
+        $_SESSION['statut'] = $user['statut'];
 
         echo 'OK';
     }

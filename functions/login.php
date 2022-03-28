@@ -39,6 +39,7 @@ if ($_POST) {
             $_SESSION['name'] = $user['nom'];
             $_SESSION['mail'] = $user['mail'];
             $_SESSION['pseudo'] = $user['pseudo'];
+            $_SESSION['statut'] = $user['statut'];
 
 
             echo 'OK';
