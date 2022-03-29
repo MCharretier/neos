@@ -128,8 +128,11 @@ nav ul {
     padding: 0.5vw;
 }
 
-.hastag {
+.hashtag {
     border: #000000 solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 15%;
     width: 100%;
     font-family: 'Poppins';

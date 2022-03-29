@@ -38,15 +38,30 @@
             <div class="cadre">
 
                 <img class="retour" src="../img/icone/retour.svg" alt="Retour à l'accueil">
+                <?php 
+                    $query = $pdo->prepare("SELECT P.image,P.hashtag,P.title,P.description FROM posts AS P WHERE id=?");
+                    $query->bindValue(1,$_GET['id']);
+                    $query->execute();
+                    $post =$query->fetch();                         
+                ?>  
+                 
 
+                    
                 <div class="info">
 
-                    <img class="nft" src="../img/nft/CloneX.png" alt="NFT de la collection CloneX">
+                    <img class="nft" src="<?=$post['image'];?>" alt="<?=$post['title'];?>">
 
                     <div class="text">
-                        <div class="nom" name="image_post">CLONEX</div>
-                        <div class="hastag" name="hastag_post">#12428</div>
-                        <div class="description" name="description_post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra turpis eget placerat porttitor. Ut nec lacinia odio. </div>
+                        <div class="nom" name="image_post"><?=$post['title'];?></div>
+                        <?php if(strlen($post['hashtag'])>0){
+                                $tag="#".$post['hashtag'];
+                            }else{
+                                $tag="";
+                            }
+                        ?>
+                        <div class="hashtag" name="hashtag_post"><?=$tag;?></div>
+                        <div class="description" name="description_post"><?=$post['description'];?></div>
+                        
                     </div>
 
                 </div>
@@ -60,7 +75,7 @@
                     </div>
                     <?php
                         
-                        $query = $pdo->prepare("SELECT * FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id INNER JOIN posts AS P ON P.id = C.post_id WHERE C.post_id=? ");
+                        $query = $pdo->prepare("SELECT U.pseudo,C.comment FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id INNER JOIN posts AS P ON P.id = C.post_id WHERE C.post_id=? ");
                         $query->bindValue(1,$_GET["id"]);
                         $query->execute();
                         $comments =$query->fetchAll(); 

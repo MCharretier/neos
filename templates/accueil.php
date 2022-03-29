@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once "../functions/pdo.php";
     if (!empty($_SESSION)){
 ?>
 
@@ -37,16 +38,27 @@
             <div class="cadre">
 
                 <div class="carousel">
-
-                    <?php for($i=0; $i<5; $i++): ?> 
-                        <a href="../templates/post.php?id=2345">
+                    <?php 
+                    $query = $pdo->prepare("SELECT * FROM posts AS P ");
+                    
+                    $query->execute();
+                    $post =$query->fetchAll();                         
+                    ?>  
+                    <?php for($i=0; $i<count($post); $i++): ?> 
+                        <a href="../templates/post.php?id=<?=$post[$i]['id'];?>">
                             <div class="post">
-                                <img class="nft" src="../img/nft/CloneX.png" alt="NFT">
+                                <img class="nft" src="<?=$post[$i]['image'];?>" alt="NFT">
                                 <div class="marge">
                                     <div class="text">
                                         <img class="pp" src="../img/icone/photo_profil.svg" alt="photo de profil">
-                                        <p class="nom">CLONEX</p>
-                                        <p class="id">#12428</p>
+                                        <p class="nom"><?=$post[$i]['title'];?></p>
+                                        <?php if(strlen($post[$i]['hashtag'])>0){
+                                            $tag="#".$post[$i]['hashtag'];
+                                        }else{
+                                            $tag="";
+                                        }
+                                        ?>
+                                        <p class="id"><?=$tag;?></p>
                                     </div>
                                 </div>
                             </div>
