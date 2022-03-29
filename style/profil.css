@@ -207,16 +207,35 @@ nav ul {
     height: 50%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .nft {
-    width: 100%;
-    height: 15vw;
+    height: 75vw;
+    width: 20vw;
     display: flex;
-    justify-content: space-between;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translateY(-20vw);  
+    transform-origin: right top;
 }
 
-.nft img {
-    width: 15vw;
-    height: 15vw;
+.nft::-webkit-scrollbar {
+    display: none;
+}
+
+.nft:first-child {
+    margin-bottom: 0;
+}
+
+.post {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    margin: 0 0 4vw 0;
+    transform: rotate(90deg);
 }

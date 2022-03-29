@@ -95,7 +95,7 @@
                     <div class="nft">
 
                         <?php for($i=0; $i<5; $i++): ?> 
-                        <img src="../img/nft/MekaVerse2.jpg" alt="Nft de la collection Mekaverse" class="nft">
+                        <img class="post" src="../img/nft/MekaVerse2.jpg" alt="Nft de la collection Mekaverse" class="nft">
                         <?php endfor; ?>
                         
                     </div>
