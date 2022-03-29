@@ -1,6 +1,8 @@
 <?php
     session_start();
+    require_once "../functions/pdo.php";
     if (!empty($_SESSION)){
+        if($_GET){
 ?>
 
 <!DOCTYPE html>
@@ -42,9 +44,9 @@
                     <img class="nft" src="../img/nft/CloneX.png" alt="NFT de la collection CloneX">
 
                     <div class="text">
-                        <div class="nom">CLONEX</div>
-                        <div class="hastag">#12428</div>
-                        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra turpis eget placerat porttitor. Ut nec lacinia odio. </div>
+                        <div class="nom" name="image_post">CLONEX</div>
+                        <div class="hastag" name="hastag_post">#12428</div>
+                        <div class="description" name="description_post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra turpis eget placerat porttitor. Ut nec lacinia odio. </div>
                     </div>
 
                 </div>
@@ -56,45 +58,26 @@
                         <h1>Commentaires</h1>
                         <img src="../img/icone/partage.svg" alt="Partager le contenu">
                     </div>
-
+                    <?php
+                        
+                        $query = $pdo->prepare("SELECT * FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id INNER JOIN posts AS P ON P.id = C.post_id WHERE C.post_id=? ");
+                        $query->bindValue(1,$_GET["id"]);
+                        $query->execute();
+                        $comments =$query->fetchAll(); 
+                    ?>
+                    <?php for($i=0; $i<count($comments); $i++):?>
                     <div class="msg">
-
                         <div class="user">
                             <img src="../img/icone/photo_profil.svg" alt="Photo de profil de user4589">
-                            <h2>user4589</h2>
+                            <h2><?= $comments[$i]['pseudo'];?></h2>
                         </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra turpis eget placerat porttitor.</p>
-
+                        <p><?= $comments[$i]['comment'];?></p>
                     </div>
-
-                    <div class="barre"></div>                    
-                    
-                    <div class="msg">
-
-                        <div class="user">
-                            <img src="../img/icone/photo_profil.svg" alt="Photo de profil de user4589">
-                            <h2>user4589</h2>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra turpis eget placerat porttitor.</p>
-
-                    </div>
-
+                    <?php if($i+1 != count($comments)):?>
                     <div class="barre"></div>
-
-                    <div class="msg">
-
-                        <div class="user">
-                            <img src="../img/icone/photo_profil.svg" alt="Photo de profil de user4589">
-                            <h2>user4589</h2>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra turpis eget placerat porttitor.</p>
-
-                    </div>
-
-                    <form action="" method="post" class="add">
+                    <?php endif;?>
+                    <?php endfor;?>
+                    <form action="" method="post" id="add" class="add">
                         <input type="text" name="comment" placeholder="Ajouter un commentaire...">
                         <button type="submit">Publier</button>
                     </form>
@@ -106,11 +89,16 @@
         </div>    
 
     </main>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/commentaire.js"></script>
 </body>
 </html>
 
 <?php
+    }
+    else {
+        header('Location: accueil.php');
+    }
 }
     else {
         header('Location: ../index.php');

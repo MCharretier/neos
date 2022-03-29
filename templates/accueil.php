@@ -39,7 +39,7 @@
                 <div class="carousel">
 
                     <?php for($i=0; $i<5; $i++): ?> 
-                        <a href="../templates/post.php">
+                        <a href="../templates/post.php?id=2345">
                             <div class="post">
                                 <img class="nft" src="../img/nft/CloneX.png" alt="NFT">
                                 <div class="marge">
