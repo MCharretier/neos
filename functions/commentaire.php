@@ -21,7 +21,7 @@ if($_POST){
         $errors=true;
     }
     if(!$errors){
-     
+    
      $query = $pdo->prepare("INSERT INTO comments (user_id,post_id,comment,date) VALUES (?,?,?,CURDATE());");
      $query->bindValue(1,$_SESSION['id']);
      $query->bindValue(2,$id);

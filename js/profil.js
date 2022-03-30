@@ -169,3 +169,19 @@ $('.settings #new_mdp').submit(function(e){
 $("#open_reports").click(function(){
     $(".bouton").toggleClass('open')
 })
+
+$("#abonner").click(function(){
+    var link = window.location.href
+    $("#abonner").toggleClass('open')
+
+    $.post('../functions/abonne.php',{
+        link:link
+    }).done(function(data){
+        data = data.split(" ")
+        $("#abonner").text(data[0])
+        $("#nb_abonnes").text(data[1])
+        $("#nb_abonnement").text(data[2])
+
+        
+    });
+})

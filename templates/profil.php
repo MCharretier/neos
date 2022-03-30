@@ -70,12 +70,12 @@
 
                             <span class="abonnés">
                                 <p class="title">Abonnés</p>
-                                <p class="text"><?= $user['nb_abonnes']?></p>
+                                <p class="text" id="nb_abonnes"><?= $user['nb_abonnes']?></p>
                             </span>
 
                             <span class="abonnements">
                                 <p class="title">Abonnements</p>
-                                <p class="text"><?= $user['nb_abonnement']?></p>
+                                <p class="text" id="nb_abonnement"><?= $user['nb_abonnement']?></p>
                             </span>
 
                         </div>
@@ -83,7 +83,21 @@
                         <div class="bouton">
                             <?php if ($_SESSION['id'] != $_GET['id']):?>
                             <div class="buttons">
-                                <button class="grand">S'abonner</button>
+                                
+                                    <?php 
+                                        $query=$pdo->prepare("SELECT * FROM abonnements WHERE id_abonnes=? AND id_abonnement=?");
+                                        $query->bindValue(1,$_SESSION['id']);
+                                        $query->bindValue(2,$_GET['id']);
+                                        $query->execute();
+                                        $abo=$query->fetch();
+                                        
+                                    ?>
+                                    <?php if(empty($abo)):?>
+                                        <button class="grand" id="abonner">S'abonner</button>
+                                    <?php else:?>
+                                        <button class="grand" id="abonner">Abonné</button>
+                                    <?php  endif;?>
+                                
                                 <button class="autre" id="open_reports">...</button>
                             </div>
                             <div id="report" >
