@@ -1,5 +1,9 @@
 var scroll = 0
 var nb_post_profil = 4
+if($(".post").length < 4){
+   
+    nb_post_profil = $(".post").length 
+}
 var post_profil_w = 19
 
 $(window).bind('mousewheel', function(event) {
