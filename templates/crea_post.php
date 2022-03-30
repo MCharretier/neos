@@ -13,6 +13,13 @@
     <title>Accueil</title>
 </head>
 <body>
+    <header>
+
+        <a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img src="../img/icone/photo_profil.svg" alt="Photo de votre profil"></a>
+        <img class="logo" src="../img/logo/logo_fond_noir.png" alt="Logo Neos">
+        <a href=""><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
+
+    </header>
     <main>
 
         <nav>
@@ -21,7 +28,7 @@
                 <li><div class="barre"></div></li>
                 <li><a href=""><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
+                <li class="crea"><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
                 <li><div class="barre"></div></li>
                 <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
                 <li><div class="barre"></div></li>
@@ -39,7 +46,7 @@
                     <div class="import">
                         <input type="file" name="file" id="file" class="select">
                         <p>Importer votre NFT</p>
-                        <img src="../img/icone/plus.svg" alt="Importer votre NFT">
+                        <img class="plus" src="../img/icone/plus.svg" alt="Importer votre NFT">
                         <div class="fake"><p>Sélectionner</p></div>
                     </div>
 
@@ -55,6 +62,15 @@
             </form>
         </div>    
     </main>
+    <footer>
+
+        <ul>
+            <li><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
+            <li class="crea"><a href="../templates/crea_post.php"><img src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
+            <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
+        </ul>
+
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../js/publication.js"></script>

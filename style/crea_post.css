@@ -33,9 +33,23 @@ html {
     background-color: #f6f6f6;
 }
 
+header {
+    display: none;
+    height: 10vw;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vw 0;
+    padding: 0 10vw;
+}
+
+header img {
+    height: 5vw;
+}
+
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 main {
@@ -46,9 +60,17 @@ main {
 }
 
 nav {
-    height: 100%;
-    width: 200px;
-    padding: 0 50px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15%;
+    padding: 0 3vw;
+}
+
+nav img {
+    height: 4vw;
 }
 
 nav ul {
@@ -63,20 +85,31 @@ nav ul {
 
 .barre {
     border-top: solid 1px #000000;
-    width: 100px;
+    width: 7.5vw;
+}
+
+.crea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 157, 164, 0.3);
+    border-radius: 0.5vw;
+    height: 6vw;
+    width: 6vw;
 }
 
 .corps {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    width: 100%;    
+    justify-content: space-between;
+    width: 100%;
 }
 
 .logo {
-    display: block;
-    height: 10vh;
+    display: flex;
+    height: 5.5vw;
+    margin: 2vw 0;
 }
 
 .cadre {
@@ -84,17 +117,18 @@ nav ul {
     flex-direction: column;
     border: #000000 solid 2px;
     width: 90%;
-    height: 80%;
+    height: 90%;
     align-items: center;
-    justify-content: space-around;
-    margin-bottom: 3vh;
+    justify-content: space-between;
+    padding: 2vw;
+    margin-bottom: 2vh;
 }
 
 .contenu {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: 30vw;
+    height: 67%;
 }
 
 .import {
@@ -113,27 +147,28 @@ nav ul {
     position: absolute;
     opacity: 0;
     z-index: 10;
-    width: 30vw;
     height: 30vw;
+    width: 30vw;
     cursor: pointer;
 }
 
 p {
     font-family: 'Poppins';
-    font-size: 30px;
+    font-size: 2.5vw;
     color: rgba(0,0,0, 0.7);
 }
 
-.import img {
+.plus {
     margin: 2vw;
+    height: 5vw;
 }
 
 .fake {
     display: flex;
     background-color: #119DA4;
-    width: 30%;
+    width: 40%;
     height: 7%;
-    border-radius: 5px;
+    border-radius: 0.3vw;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -142,7 +177,7 @@ p {
 .fake p {
     color: #ffffff;
     font-family: 'Poppins';
-    font-size: 18px;
+    font-size: 1.5vw;
 }
 
 .info {
@@ -156,7 +191,7 @@ p {
 
 .info input {
     font-family: 'Poppins';
-    font-size: 30px;
+    font-size: 2.5vw;
     color: rgba(0,0,0, 0.7);
 }
 
@@ -177,14 +212,156 @@ p {
 }
 
 .publier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #119DA4;
     width: 25%;
-    height: 7%;
+    height: 10%;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5vw;
+    margin-top: 1vw;
     text-align: center;
     color: #ffffff;
     font-family: 'Poppins';
-    font-size: 30px;
+    font-size: 2.5vw;
     cursor: pointer;
+}
+
+footer {
+    display: none;
+    position: sticky;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    padding: 0 10vw;
+    margin: 2vw 0;
+    background-color: #f6f6f6;
+}
+
+footer ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img {
+    height: 5vw;
+}
+
+
+
+                     /* RESPONSIVE */
+
+
+
+@media screen and (max-width: 1300px) {
+
+    .cadre {
+        margin-top: 2vw;
+        padding: 4vw 2vw;
+    }
+
+    .import {
+        height: 32.5vw;
+        width: 32.5vw;
+    }
+
+    .info {
+        height: 32.5vw;
+        width: 32.5vw;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .corps {
+        height: 100%;
+    }
+
+    .cadre {
+        height: 100%;
+        padding: 2vw;
+    }
+
+    .contenu {
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .import {
+        height: 50vw;
+        width: 50vw;
+        margin-bottom: 4vw;
+    }
+
+    .select {
+        height: 50vw;
+        width: 50vw;
+    }
+
+    .info {
+        height: 50vw;
+        width: 50vw;
+    }
+
+    .publier {
+        margin-top: 3vw;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    header {
+        display: flex;
+    }
+
+    .corps .logo {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    .cadre {
+        padding: 4vw;
+    }
+
+    .import {
+        height: 60vw;
+        width: 60vw;
+        margin-bottom: 4vw;
+    }
+
+    .select {
+        height: 60vw;
+        width: 60vw;
+    }
+
+    .info {
+        height: 60vw;
+        width: 60vw;
+    }
+
+    .publier {
+        width: 60vw;
+        height: 15%;
+        font-size: 3vw;
+    }
+    
+    .crea {
+        height: 8vw;
+        width: 8vw;
+    }
+    
 }
