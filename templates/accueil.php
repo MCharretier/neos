@@ -26,7 +26,7 @@
                 <li><div class="barre"></div></li>
                 <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href="../templates/profil.php"><img class="icone" src="../img/icone/profil.svg" alt="Lien vers la page de profil"></a></li>
+                <li><a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img class="icone" src="../img/icone/profil.svg" alt="Lien vers la page de profil"></a></li>
             </ul>
             
         </nav>
@@ -39,7 +39,7 @@
 
                 <div class="carousel">
                     <?php 
-                    $query = $pdo->prepare("SELECT * FROM posts AS P ");
+                    $query = $pdo->prepare("SELECT * FROM posts AS P ORDER BY id DESC");
                     
                     $query->execute();
                     $post =$query->fetchAll();                         
@@ -51,7 +51,11 @@
                                 <div class="marge">
                                     <div class="text">
                                         <img class="pp" src="../img/icone/photo_profil.svg" alt="photo de profil">
+                                        <?php if(count(explode(" ",$post[$i]['title']))>1 || strlen($post[$i]['title'])>10): ?>
+                                        <p class="nom dbligne"><?=$post[$i]['title'];?></p>
+                                        <?php else: ?>
                                         <p class="nom"><?=$post[$i]['title'];?></p>
+                                        <?php endif; ?>
                                         <?php if(strlen($post[$i]['hashtag'])>0){
                                             $tag="#".$post[$i]['hashtag'];
                                         }else{

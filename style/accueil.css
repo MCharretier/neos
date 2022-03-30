@@ -165,6 +165,10 @@ a {
     text-align: center;
 }
 
+.nom.dbligne {
+    transform: rotate(-90deg) translate(0, -63%);
+}
+
 .id {
     font-family: 'Poppins';
     text-align: center;

@@ -33,8 +33,23 @@ html {
     background-color: #f6f6f6;
 }
 
+header {
+    display: none;
+    height: 10vw;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vw 0;
+    padding: 0 10vw;
+}
+
+header img {
+    height: 5vw;
+}
+
 body {
-    width: 100vw;
+    width: 100%;
+    height: 100%;
 }
 
 main {
@@ -45,12 +60,13 @@ main {
 }
 
 nav {
+    display: flex;
     position: sticky;
     top: 0;
     left: 0;
     height: 100vh;
-    width: 200px;
-    padding: 0 50px;
+    width: 15%;
+    padding: 0 3vw;
 }
 
 nav ul {
@@ -65,7 +81,7 @@ nav ul {
 
 .barre {
     border-top: solid 1px #000000;
-    width: 100px;
+    width: 7.5vw;
 }
 
 .corps {
@@ -73,13 +89,13 @@ nav ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 100%;    
+    width: 85%;    
 }
 
 .logo {
     display: block;
-    height: 10vh;
-    margin: 4vh 0;
+    height: 7.5vw;
+    margin: 2vw 0;
 }
 
 .cadre {
@@ -90,6 +106,7 @@ nav ul {
 }
 
 .retour {
+    display: flex;
     width: 2vw;
     margin: 1vw;
 }
@@ -109,9 +126,8 @@ nav ul {
 .text {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
     width: 32vw;
 }
 
@@ -120,23 +136,23 @@ nav ul {
     justify-content: center;
     align-items: center;
     border: #000000 solid 1px;
-    height: 30%;
+    height: 9vw;
     width: 100%;
     font-family: 'Niguella';
-    font-size: 50px;
+    font-size: 3.5vw;
     color: rgba(0,0,0);
     padding: 0.5vw;
 }
 
-.hashtag {
-    border: #000000 solid 1px;
+.hashtag {    
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 15%;
+    align-items: center;
+    border: #000000 solid 1px;
+    height: 6vw;
     width: 100%;
     font-family: 'Poppins';
-    font-size: 35px;
+    font-size: 2.5vw;
     color: rgba(0,0,0);
     padding: 0.5vw;
 }
@@ -147,15 +163,15 @@ nav ul {
     height: 40%;
     width: 100%;
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 1.5vw;
     color: rgba(0,0,0, 0.7);
     padding: 0.5vw;
 }
 
 .commentaire {
     border: #000000 solid 1px;
-    width: 67vw;
-    margin: 3vw 4vw;
+    width: 90%;
+    margin: 3vw 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,6 +193,7 @@ nav ul {
 
 .top h1 {
     width: 55vw;
+    font-size: 2.5vw;
 }
 
 .msg {
@@ -185,15 +202,11 @@ nav ul {
     margin: 3vw 0;
     padding: 0 3vw;
     width: 100%;
-    font-family: 'Poppins';
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.7);
 }
 
 .user {
     display: flex;
     align-items: center;
-    justify-content: start;
     margin-bottom: 1vw;
 }
 
@@ -203,12 +216,15 @@ nav ul {
 
 .user h2 {
     font-family: 'Poppins bold';
-    font-size: 30px;
+    font-size: 2.2vw;
     margin-left: 3vw;
 }
 
-.barre2 {
-    width: 12vw;
+.msg p {
+    font-family: 'Poppins';
+    font-size: 1.8vw;
+    color: rgba(0, 0, 0, 0.7);
+    overflow-wrap: break-word;
 }
 
 .add {
@@ -216,7 +232,7 @@ nav ul {
     align-items: center;
     border-top: #000000 solid 1px;
     height: 6vw;
-    width: 100%;
+    width: 97%;
     justify-content: space-between;
     padding: 0 3vw;
 }
@@ -248,3 +264,115 @@ nav ul {
     cursor: pointer;
 }
 
+footer {
+    display: none;
+    position: sticky;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    padding: 0 10vw;
+    margin: 2vw 0;
+    background-color: #f6f6f6;
+}
+
+footer ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img {
+    height: 5vw;
+}
+
+
+
+                     /* RESPONSIVE */
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    header {
+        display: flex;
+    }
+
+    .corps {
+        width: 100%;
+    }
+
+    .corps .logo {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    .cadre {
+        width: 90%;
+    }
+
+    .retour {
+        margin: 2vw;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+        margin: 0;
+    }
+
+    .nft {
+        height: 60vw;
+        width: 60vw;
+        margin: 2vw 0;
+    }
+    
+    .text {
+        width: 100%;
+    }
+
+    .nom, .hashtag, .description {
+        width: 90%;
+        margin: 3vw 5%;
+    }
+
+    .description {
+        font-size: 2vw;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .cadre {
+        border: none;
+    }
+
+    .nft {
+        width: 75vw;
+        height: 75vw;
+    }
+
+    .retour {
+        display: none;
+    }
+
+    .description {
+        font-size: 2.5vw;
+    }
+
+    .msg p {
+        font-size: 2.5vw;
+    }
+
+}
