@@ -33,6 +33,20 @@ html {
     background-color: #f6f6f6;
 }
 
+header {
+    display: none;
+    height: 10vw;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vw 0;
+    padding: 0 10vw;
+}
+
+header img {
+    height: 5vw;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -46,9 +60,17 @@ main {
 }
 
 nav {
-    height: 100%;
-    width: 200px;
-    padding: 0 50px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15%;
+    padding: 0 3vw;
+}
+
+nav img {
+    height: 4vw;
 }
 
 nav ul {
@@ -63,9 +85,18 @@ nav ul {
 
 .barre {
     border-top: solid 1px #000000;
-    width: 100px;
+    width: 7.5vw;
 }
 
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 157, 164, 0.3);
+    border-radius: 0.5vw;
+    height: 6vw;
+    width: 6vw;
+}
 
 a {
     text-decoration:  none;
@@ -77,30 +108,33 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
+    width: 85%;
 }
 
 .logo {
     display: block;
-    height: 10vh;
+    height: 5.5vw;
+    margin: 2vw 0;
 }
 
 .cadre {
     display: flex;
     border: #000000 solid 2px;
     border-right: none;
-    width: 100%;
-    height: 40vw;
+    width: 95%;
+    height: 75%;
     align-items: center;
     justify-content: center;
     padding-left: 5vw;
+    margin-left: 5%;
     overflow: hidden;
+    margin-bottom: 2vh;
 }
 
 .carousel {
     display: flex;
     flex-direction: column;
-    height: 170%;
+    height: 75vw;
     align-items: center;
     overflow-y: auto;
     overflow-x: hidden;
@@ -153,24 +187,151 @@ a {
 }
 
 .pp {
-    height: 7%;
-    width: 20%;
+    height: 2vw;
+    width: 2vw;
 }
 
 .nom {
     font-family: 'Niguella';
     font-size: 4vw;
-    transform: rotate(-90deg) translate(0, -140%);
+    transform: rotate(-90deg) translate(0, -6.5vw);
     width: 23vw;
     text-align: center;
 }
 
 .nom.dbligne {
-    transform: rotate(-90deg) translate(0, -63%);
+    transform: rotate(-90deg) translate(0, -6vw);
 }
 
 .id {
     font-family: 'Poppins';
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.2vw;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .post {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .nom {
+        font-size: 5vw;
+        transform: rotate(-90deg) translate(0, -8.7vw);
+        width: 30vw;
+    }
+    
+    .nom.dbligne {
+        transform: rotate(-90deg) translate(0, -8.5vw);
+    }
+
+    .id {
+        font-size: 1.3vw;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .post {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .pp {
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+
+    .nom {
+        font-size: 6vw;
+        transform: rotate(-90deg) translate(0, -7.7vw);
+    }
+    
+    .nom.dbligne {
+        transform: rotate(-90deg) translate(0, -7.5vw);
+    }
+
+    .id {
+        font-size: 1.4vw;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    
+    .logo {
+        height: 7vw;
+    }
+
+    .cadre {
+        border-right: #000000 solid 2px;
+        border-bottom: none;
+        width: 80%;
+        height: 85%;
+        padding-top: 5vw;
+        padding-left: 0;
+        margin: 2vw 0 0 0;
+    }
+    
+    .carousel {
+        height: 100%;
+        transform:rotate(0);
+    }
+    
+    .post {
+        width: 50vw;
+        height: 50vw;
+        transform:rotate(0);
+    } 
+
+    .pp {
+        height: 3vw;
+        width: 3vw;
+    }
+
+    .nom {
+        font-size: 7.5vw;
+        transform: rotate(-90deg) translate(0, -10.5vw);
+        width: 40vw;
+    }
+    
+    .nom.dbligne {
+        transform: rotate(-90deg) translate(0, -10.5vw);
+    }
+
+    .id {
+        font-size: 1.6vw;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    header {
+        display: flex;
+    }
+
+    .corps {
+        width: 100%;
+    }
+
+    .corps .logo {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    .active {
+        height: 8vw;
+        width: 8vw;
+    }
+
 }

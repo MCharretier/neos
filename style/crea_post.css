@@ -88,7 +88,7 @@ nav ul {
     width: 7.5vw;
 }
 
-.crea {
+.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -359,7 +359,7 @@ footer img {
         font-size: 3vw;
     }
     
-    .crea {
+    .active {
         height: 8vw;
         width: 8vw;
     }
