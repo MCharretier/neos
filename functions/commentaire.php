@@ -28,7 +28,8 @@ if($_POST){
      $query->bindValue(3,$comment);
      $query->execute();
 
-     $query = $pdo->prepare("SELECT pseudo FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id");
+     $query = $pdo->prepare("SELECT U.pseudo FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id WHERE C.user_id =?");
+     $query->bindValue(1,$_SESSION['id']);
      $query->execute();
      $com =$query->fetch();
 

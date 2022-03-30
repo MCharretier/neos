@@ -48,12 +48,15 @@ $('#change_description').click(function(){
 $('.settings #new_description').submit(function(e){
     e.preventDefault()
     var description = $(this).find('textarea[name=description]').val()
-    $.post('../functions/',{
+    $.post('../functions/change_description.php',{
         description:description
     }).done(function(data){
-        $(this).css({'display':'none'})
-        $('.settings .popup').css({'display':'flex'})
-        $('.settings').css({'display':'none'})
+        if(data != "ERROR"){
+            $("#bio").text(data);
+            $(this).css({'display':'none'})
+            $('.settings .popup').css({'display':'flex'})
+            $('.settings').css({'display':'none'})
+        }
     })
 })
 
@@ -124,12 +127,15 @@ $('#pdp').change(function(){
 $('.settings #new_pdp').submit(function(e){
     e.preventDefault()
     
-    $.post('../functions/',{
+    $.post('../functions/change_pdp.php',{
         pdp:image_path
     }).done(function(data){
-        $(this).css({'display':'none'})
-        $('.settings .popup').css({'display':'flex'})
-        $('.settings').css({'display':'none'})
+        if(data != "ERROR"){
+            $(this).css({'display':'none'})
+            $('.settings .popup').css({'display':'flex'})
+            $('.settings').css({'display':'none'}) 
+            $("#photodp").attr("src",data)
+        }
     })
 })
 
@@ -143,13 +149,19 @@ $('.settings #new_mdp').submit(function(e){
     var old_password = $(this).find('input[name=old_password]').val()
     var new_password = $(this).find('input[name=new_password]').val()
     var confirm_new_password = $(this).find('input[name=confirm_new_password]').val()
-    $.post('../functions/',{
+    $.post('../functions/change_mdp.php',{
         old_password:old_password,
         new_password:new_password,
         confirm_new_password:confirm_new_password
     }).done(function(data){
-        $(this).css({'display':'none'})
-        $('.settings .popup').css({'display':'flex'})
-        $('.settings').css({'display':'none'})
+        if(data != "ERROR"){
+           $(window).attr("location","../index.php");
+        }
+
     })
+})
+
+
+$("#open_reports").click(function(){
+    $(".bouton").toggleClass('open')
 })

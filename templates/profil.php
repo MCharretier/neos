@@ -48,7 +48,7 @@
 
                 <div class="user">
 
-                    <img src="<?= $user['image']?>" alt="Photo de profil de <?= $user['pseudo']?>">
+                    <img id="photodp" src="<?= $user['image']?>" alt="Photo de profil de <?= $user['pseudo']?>">
 
                     <div class="info">
 
@@ -59,7 +59,7 @@
 
                         <span class="desc">
                             <p class="titre">Description</p>
-                            <p class="text_ita"><?= $user['bio']?></p>
+                            <p class="text_ita" id="bio" ><?= $user['bio']?></p>
                         </span>
 
                     </div>
@@ -82,16 +82,16 @@
 
                         <div class="bouton">
                             <?php if ($_SESSION['id'] != $_GET['id']):?>
-                            <button class="grand">S'abonner</button>
-
-                            <button class="autre" id="open_reports">...</button>
-
-                            <div class="report">
+                            <div class="buttons">
+                                <button class="grand">S'abonner</button>
+                                <button class="autre" id="open_reports">...</button>
+                            </div>
+                            <div id="report" >
                                 <button class="grand">Signaler</button>
                                 <button class="grand">Bloquer</button>
                             </div>
                             <?php else:?>
-                            <button class="autre" id="open_settings">...</button>
+                            <button class="autre" id="open_settings">Paramètres</button>
                             <?php endif;?>
                         </div>
 
