@@ -14,13 +14,13 @@
     <title>Accueil</title>
 </head>
 <body>
-<header>
+    <header>
 
-    <a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img src="../img/icone/photo_profil.svg" alt="Photo de votre profil"></a>
-    <img class="logo" src="../img/logo/logo_fond_noir.png" alt="Logo Neos">
-    <a href=""><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
+        <a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img src="../img/icone/photo_profil.svg" alt="Photo de votre profil"></a>
+        <img class="logo" src="../img/logo/logo_fond_noir.png" alt="Logo Neos">
+        <a href=""><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
 
-</header>
+    </header>
     <main>
 
         <nav>

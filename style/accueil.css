@@ -209,6 +209,36 @@ a {
     font-size: 1.2vw;
 }
 
+footer {
+    display: none;
+    position: sticky;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    padding: 0 10vw;
+    margin: 2vw 0;
+    background-color: #f6f6f6;
+}
+
+footer ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img {
+    height: 5vw;
+}
+
+
+
+                     /* RESPONSIVE */
+
+
+
+
 @media screen and (max-width: 1200px) {
 
     .post {

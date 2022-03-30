@@ -48,8 +48,9 @@ header img {
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 main {
@@ -102,8 +103,8 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-around;
+    width: 85%;
 }
 
 .logo {
@@ -117,7 +118,6 @@ nav ul {
     flex-direction: column;
     border: #000000 solid 2px;
     width: 90%;
-    height: 90%;
     align-items: center;
     justify-content: space-between;
     padding: 2vw;
@@ -128,7 +128,6 @@ nav ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    height: 67%;
 }
 
 .import {
@@ -230,12 +229,13 @@ p {
 
 footer {
     display: none;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    right: 0;
     height: 10vh;
     width: 100%;
     padding: 0 10vw;
-    margin: 2vw 0;
+    margin-bottom: 2vw;
     background-color: #f6f6f6;
 }
 
@@ -283,8 +283,9 @@ footer img {
     }
 
     .cadre {
-        height: 100%;
-        padding: 2vw;
+        padding: 1vw;
+        margin-top: 0;
+        width: 80%;
     }
 
     .contenu {
@@ -294,31 +295,62 @@ footer img {
     }
 
     .import {
-        height: 50vw;
-        width: 50vw;
-        margin-bottom: 4vw;
+        height: 30vw;
+        width: 30vw;
+        margin-bottom: 2vw;
     }
 
     .select {
-        height: 50vw;
-        width: 50vw;
+        height: 30vw;
+        width: 30vw;
     }
 
     .info {
-        height: 50vw;
-        width: 50vw;
+        height: 25vw;
+        width: 30vw;
     }
 
     .publier {
-        margin-top: 3vw;
+        margin-top: 1vw;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .cadre {
+        padding: 2vw;
+    }
+
+    .info {
+        height: 30vw;
+        width: 30vw;
     }
 
 }
 
 @media screen and (max-width: 800px) {
 
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    main {
+        justify-content: center;
+        height: 100%;
+    }
+
     header {
         display: flex;
+    }
+
+    .corps {
+        justify-content: start;
+    }
+
+    .cadre {
+        width: 100%;
     }
 
     .corps .logo {
@@ -333,28 +365,28 @@ footer img {
         display: flex;
     }
 
-    .cadre {
-        padding: 4vw;
-    }
-
     .import {
-        height: 60vw;
-        width: 60vw;
-        margin-bottom: 4vw;
+        height: 35vw;
+        width: 35vw;
+        margin-bottom: 2vw;
     }
 
     .select {
-        height: 60vw;
-        width: 60vw;
+        height: 35vw;
+        width: 35vw;
     }
 
     .info {
-        height: 60vw;
-        width: 60vw;
+        height: 20vw;
+        width: 40vw;
+    }
+
+    .description {
+        height: 40%;
     }
 
     .publier {
-        width: 60vw;
+        width: 40vw;
         height: 15%;
         font-size: 3vw;
     }
@@ -364,4 +396,134 @@ footer img {
         width: 8vw;
     }
     
+}
+
+@media screen and (max-width: 700px) {
+
+    .import {
+        height: 40vw;
+        width: 40vw;
+    }
+
+    .select {
+        height: 40vw;
+        width: 40vw;
+    }
+
+    .info {
+        height: 29vw;
+        width: 40vw;
+    }
+
+    .description {
+        height: 50%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .cadre {
+        border: none;
+    }
+
+    .import {
+        height: 50vw;
+        width: 50vw;
+    }
+
+    p {
+        font-size: 3.5vw;
+    }
+
+    .plus {
+        height: 7vw;
+    }
+
+    .fake {
+        height: 10%;
+    }
+
+    .fake p {
+        font-size: 2.5vw;
+    }
+
+    .select {
+        height: 50vw;
+        width: 50vw;
+    }
+
+    .info {
+        height: 35vw;
+        width: 50vw;
+    }
+
+    .info input {
+        font-size: 3.5vw;
+    }
+
+    .description {
+        height: 50%;
+    }
+
+    .publier {
+        width: 50vw;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .import {
+        height: 70vw;
+        width: 70vw;
+    }
+
+    .select {
+        height: 70vw;
+        width: 70vw;
+    }
+
+    .info {
+        height: 35vw;
+        width: 70vw;
+    }
+
+    .description {
+        height: 55%;
+    }
+
+    .publier {
+        width: 70vw;
+        font-size: 3.5vw;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .import {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    .select {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    .info {
+        height: 60vw;
+        width: 80vw;
+    }
+
+    .description {
+        height: 55%;
+    }
+
+    .publier {
+        height: 7vw;
+        width: 80vw;
+    }
+
 }
