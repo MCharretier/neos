@@ -44,16 +44,15 @@
 
             <div class="cadre">
 
-                <img class="retour" src="../img/icone/retour.svg" alt="Retour à l'accueil">
+                <a href="../templates/accueil.php"><img class="retour" src="../img/icone/retour.svg" alt="Retour à l'accueil"></a>
+                
                 <?php 
                     $query = $pdo->prepare("SELECT P.image,P.hashtag,P.title,P.description FROM posts AS P WHERE id=?");
                     $query->bindValue(1,$_GET['id']);
                     $query->execute();
                     $post =$query->fetch();                         
                 ?>  
-                 
-
-                    
+                   
                 <div class="info">
 
                     <img class="nft" src="<?=$post['image'];?>" alt="<?=$post['title'];?>">
