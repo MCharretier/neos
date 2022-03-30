@@ -51,8 +51,17 @@
                                 <div class="marge">
                                     <div class="text">
                                         <img class="pp" src="../img/icone/photo_profil.svg" alt="photo de profil">
-                                        <?php if(count(explode(" ",$post[$i]['title']))>1 || strlen($post[$i]['title'])>10): ?>
-                                        <p class="nom dbligne"><?=$post[$i]['title'];?></p>
+                                        <?php $title=explode(" ",$post[$i]['title']) ?>
+                                        <?php if(count($title)>1 || strlen($post[$i]['title'])>10): ?>
+
+                                        <p class="nom dbligne">
+                                            <?php 
+                                            for($x=0;$x<count($title);$x++) {
+                                                echo $title[$x];
+                                                echo "<br>";
+                                            }
+                                            ?>
+                                        </p>
                                         <?php else: ?>
                                         <p class="nom"><?=$post[$i]['title'];?></p>
                                         <?php endif; ?>
