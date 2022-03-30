@@ -28,7 +28,7 @@
                 <li><div class="barre"></div></li>
                 <li><a href=""><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
                 <li><div class="barre"></div></li>
-                <li class="crea"><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
+                <li class="active"><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
                 <li><div class="barre"></div></li>
                 <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
                 <li><div class="barre"></div></li>
@@ -66,7 +66,7 @@
 
         <ul>
             <li><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
-            <li class="crea"><a href="../templates/crea_post.php"><img src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
+            <li class="active"><a href="../templates/crea_post.php"><img src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
             <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
         </ul>
 

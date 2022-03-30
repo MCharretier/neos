@@ -28,7 +28,7 @@
                 <li><div class="barre"></div></li>
                 <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href="../templates/profil.php?id=<?= $_SESSION['id']?>"><img class="icone" src="../img/icone/profil.svg" alt="Lien vers la page de profil"></a></li>
+                <li class="active"><a href="../templates/profil.php?id=<?= $_SESSION['id']?>"><img class="icone" src="../img/icone/profil.svg" alt="Lien vers la page de profil"></a></li>
             </ul>
             
         </nav>

@@ -88,6 +88,16 @@ nav ul {
     width: 7.5vw;
 }
 
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 157, 164, 0.3);
+    border-radius: 0.5vw;
+    height: 6vw;
+    width: 6vw;
+}
+
 .corps {
     display: flex;
     flex-direction: column;
@@ -352,6 +362,11 @@ footer img {
 
     .description {
         font-size: 2vw;
+    }
+
+    .active {
+        height: 8vw;
+        width: 8vw;
     }
 
 }
