@@ -78,7 +78,7 @@ $("#publication").submit(function(e){
         $(".alert").remove();
     }).done(function(data){
         if (data === 'OK'){
-            $(window).attr('location','../templates/profil.php');
+            $(window).attr('location','../templates/accueil.php');
         }
         else {
             $('form.cadre').append(data);
