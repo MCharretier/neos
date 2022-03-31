@@ -47,15 +47,22 @@
                 <a href="../templates/accueil.php"><img class="retour" src="../img/icone/retour.svg" alt="Retour à l'accueil"></a>
                 
                 <?php 
-                    $query = $pdo->prepare("SELECT P.image,P.hashtag,P.title,P.description FROM posts AS P WHERE id=?");
+                    $query = $pdo->prepare("SELECT P.image AS pimage,P.hashtag,P.title,P.description, U.image AS pdp, U.id AS uid, U.pseudo FROM posts AS P INNER JOIN users AS U ON U.id = P.user_id WHERE P.id=?");
                     $query->bindValue(1,$_GET['id']);
                     $query->execute();
                     $post =$query->fetch();                         
                 ?>  
-                   
-                <div class="info">
 
-                    <img class="nft" src="<?=$post['image'];?>" alt="<?=$post['title'];?>">
+
+                <div class="info">
+                    <a href="../templates/profil.php?id=<?= $post['uid'];?>" class="post_image">
+                        <div class="profil">
+                            <img id="pp" src="<?= $post['pdp'];?> " alt="photo de profil">
+                            <p class="pseudo"><?=$post['pseudo'];?></p>
+                        </div>
+                        <img class="nft" src="<?=$post['pimage'];?>" alt="<?=$post['title'];?>">
+                    </a>
+                    
 
                     <div class="text">
                         <div class="nom" name="image_post"><?=$post['title'];?></div>
@@ -81,7 +88,7 @@
                     </div>
                     <?php
                         
-                        $query = $pdo->prepare("SELECT U.pseudo,C.comment FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id INNER JOIN posts AS P ON P.id = C.post_id WHERE C.post_id=? ");
+                        $query = $pdo->prepare("SELECT U.pseudo,C.comment,U.image FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id INNER JOIN posts AS P ON P.id = C.post_id WHERE C.post_id=? ");
                         $query->bindValue(1,$_GET["id"]);
                         $query->execute();
                         $comments =$query->fetchAll(); 

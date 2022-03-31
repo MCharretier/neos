@@ -46,18 +46,23 @@
 
                 <div class="carousel">
                     <?php 
-                    $query = $pdo->prepare("SELECT * FROM posts AS P ORDER BY id DESC");
-                    
+                    $query = $pdo->prepare("SELECT P.id AS pid,P.image AS pdp,P.title,P.hashtag,U.id,U.pseudo,U.image FROM posts AS P INNER JOIN users AS U ON U.id=P.user_id ORDER BY P.id DESC");
                     $query->execute();
                     $post =$query->fetchAll();                         
                     ?>  
                     <?php for($i=0; $i<count($post); $i++): ?> 
-                        <a href="../templates/post.php?id=<?=$post[$i]['id'];?>">
+                        <a href="../templates/post.php?id=<?=$post[$i]['pid'];?>">
                             <div class="post">
-                                <img class="nft" src="<?=$post[$i]['image'];?>" alt="NFT">
+                                <img class="nft" src="<?=$post[$i]['pdp'];?>" alt="NFT">
+                                
                                 <div class="marge">
                                     <div class="text">
-                                        <img class="pp" src="../img/icone/photo_profil.svg" alt="photo de profil">
+                                        <div  class="profil">
+                                            
+                                            <img class="pp" src="<?= $post[$i]['image'];?> " alt="photo de profil">
+                                            <p class="pseudo"><?=$post[$i]['pseudo'];?></p>
+                    
+                                        </div>
                                         <?php $title=explode(" ",$post[$i]['title']) ?>
                                         <?php if(count($title)>1 || strlen($post[$i]['title'])>10): ?>
 

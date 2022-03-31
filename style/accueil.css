@@ -160,6 +160,7 @@ a {
     width: 99%;
 }
 
+
 .marge {
     display: flex;
     position: absolute;
@@ -184,10 +185,24 @@ a {
     margin: 0.5vw;
     padding: 0.5vw;
 }
-
+.profil{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
 .pp {
+    margin-right: 1vw;
     height: 2vw;
     width: 2vw;
+}
+.pseudo{
+    font-family: "Poppins regular";
+    font-size: 1vw;
+    opacity: 0;
+    transition: 0.2s; 
+}
+.marge:hover .pseudo{
+    opacity:1;
 }
 
 .nom {

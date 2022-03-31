@@ -3,6 +3,15 @@
     require_once '../functions/pdo.php';
     if (!empty($_SESSION)){
         if ($_GET){
+            
+            $query = $pdo->prepare('SELECT image, pseudo, bio, nb_abonnes, nb_abonnement FROM users WHERE id=?;');
+            $query->bindValue(1, $_GET['id']);
+            $query->execute();
+            $user = $query->fetch();
+            if(!empty($user)){
+
+            
+            
 ?>
 
 <!DOCTYPE html>
@@ -183,6 +192,9 @@
 </html>
 
 <?php
+        }else{
+            header('Location: accueil.php');
+        }
     }
     else {
         header('Location: accueil.php');
