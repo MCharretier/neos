@@ -24,9 +24,14 @@
     </header>
     <main>
 
+    <?php 
+            $query = $pdo->prepare("SELECT image FROM users");
+            $query->execute();
+            $nav_img =$query->fetch();                         
+        ?>  
         <nav>
             <ul>
-                <li><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
+                <li ><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
                 <li><div class="barre"></div></li>
                 <li class="active"><a href="../templates/recherche.php"><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
                 <li><div class="barre"></div></li>
@@ -34,7 +39,7 @@
                 <li><div class="barre"></div></li>
                 <li><a href="../templates/indispo.php"><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img class="icone" src="../img/icone/profil.svg" alt="Lien vers la page de profil"></a></li>
+                <li><a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img class="icone" src="<?= $nav_img['image'];?>" alt="Lien vers la page de profil"></a></li>
             </ul>
             
         </nav>
