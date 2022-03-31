@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if (!empty($_SESSION)){
+    if (empty($_SESSION)){
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -110,7 +110,7 @@
 </html>
 <?php 
     }else{
-        header("Location: ../templates/accueil.php");
+        header("Location: templates/accueil.php");
         
     } 
 ?>

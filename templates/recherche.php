@@ -44,22 +44,11 @@
 
             <form action="" method="post" class="recherche">
                 <h2>Pour trouver un contact c'est ici !</h2>
-                <input type="text" name="recherche" placeholder="Rechercher...">
+                <input type="text" id="recherche" name="recherche" placeholder="Rechercher...">
             </form>
 
             <div class="liste">
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">paninikebap</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">bobylaloutre</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">bobylaloutre</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">bobylaloutre</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
+        
             </div>
 
         </div>
@@ -77,7 +66,7 @@
     </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../js/accueil.js"></script>
+    <script src="../js/recherche.js"></script>
 </body>
 </html>
 
