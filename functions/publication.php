@@ -50,9 +50,11 @@ if ($_POST) {
 
             }else{
                 echo '<div class="alert">Le hashtag doit contenir 10 chiffres au maximum !</div>';
+                $errors = true;
             }
         }else{
             echo '<div class="alert">Le hashtag doit contenir que des chiffres !</div>';
+            $errors = true;
         }
     }
     
@@ -60,6 +62,8 @@ if ($_POST) {
     if (!empty($description)) {
         if(strlen($description) > 300){
             echo '<div class="alert">La description doit contenir 300 caractère au maximum !</div>';
+            $errors = true;
+
         }
     }
     
