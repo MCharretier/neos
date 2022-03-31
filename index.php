@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if (!empty($_SESSION)){
+    if (empty($_SESSION)){
 ?>
 <!DOCTYPE html>
 <html lang="fr">
