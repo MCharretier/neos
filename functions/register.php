@@ -64,7 +64,7 @@ if($_POST){
         $errors=true;  
     }
     
-    if($password >= 8){
+    if(strlen($password) >= 8){
         if(empty($confirm_password)){
             echo '<div class="alert">La confirmation de mot de passe est obligatoire</div>';
             $errors=true;   
