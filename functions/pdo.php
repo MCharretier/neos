@@ -1,7 +1,7 @@
 <?php
 
     $pdo = new PDO('mysql:host=localhost;dbname=neos',
-        'neos', 'MAMS9neos',
+        'root', '',
         [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]
     );
 
