@@ -1,0 +1,12 @@
+{
+    "name": "charr/neos",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mathis Charretier",
+            "email": "charretiermathis@gmail.com"
+        }
+    ],
+    "require": {}
+}
