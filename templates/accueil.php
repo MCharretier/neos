@@ -18,7 +18,7 @@
 
         <a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img src="../img/icone/photo_profil.svg" alt="Photo de votre profil"></a>
         <img class="logo" src="../img/logo/logo_fond_noir.png" alt="Logo Neos">
-        <a href=""><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
+        <a href="../templates/recherche.php"><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
 
     </header>
     <main>
@@ -27,7 +27,7 @@
             <ul>
                 <li class="active"><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href=""><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
+                <li><a href="../templates/recherche.php"><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
                 <li><div class="barre"></div></li>
                 <li><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
                 <li><div class="barre"></div></li>
@@ -38,7 +38,7 @@
             
         </nav>
         
-       <div class="corps">
+        <div class="corps">
 
             <img class="logo" src="../img/logo/logo_+_texte_noir.png" alt="Logo Neos">
 
