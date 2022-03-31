@@ -35,12 +35,11 @@ html {
 
 header {
     display: none;
-    height: 10vw;
+    height: 12vh;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 2vw 0;
-    padding: 0 10vw;
+    padding: 2vw 10vw;
 }
 
 header img {
@@ -211,13 +210,11 @@ a {
 
 footer {
     display: none;
-    position: sticky;
-    bottom: 0;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
-    padding: 0 10vw;
-    margin: 2vw 0;
+    padding: 2vh 10vw;
     background-color: #f6f6f6;
+    border-top: #000000 solid 1px;
 }
 
 footer ul {
@@ -339,12 +336,20 @@ footer img {
 
 @media screen and (max-width: 800px) {
 
+    main {
+        justify-content: center;
+        height: auto;
+        align-items: center;
+    }
+
     header {
         display: flex;
     }
 
     .corps {
+        height: calc(80vh - 2vw);
         width: 100%;
+        justify-content: start;
     }
 
     .corps .logo {
@@ -353,6 +358,11 @@ footer img {
 
     nav {
         display: none;
+    }
+
+    .cadre {
+        height: auto;
+        margin-top: 0;
     }
 
     footer {
