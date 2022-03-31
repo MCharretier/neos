@@ -251,10 +251,12 @@ nav ul {
     width: 100%;
 }
 
-.user {
+a.user {
     display: flex;
     align-items: center;
     margin-bottom: 1vw;
+    text-decoration: none;
+    color:black;
 }
 
 .user img {

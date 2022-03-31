@@ -96,10 +96,11 @@
                     ?>
                     <?php for($i=0; $i<count($comments); $i++):?>
                     <div class="msg">
-                        <div class="user">
-                            <img src="../img/icone/photo_profil.svg" alt="Photo de profil de user4589">
+                        <a href="../templates/profil.php?id=<?= $post['uid'];?>" class="user">
+                        
+                            <img src="<?= $comments[$i]['image'];?>" alt="Photo de profil de">
                             <h2><?= $comments[$i]['pseudo'];?></h2>
-                        </div>
+                    </a>
                         <p><?= $comments[$i]['comment'];?></p>
                     </div>
                     <?php if($i+1 != count($comments)):?>
