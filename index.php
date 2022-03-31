@@ -110,7 +110,6 @@
 </html>
 <?php 
     }else{
-        header("Location: templates/accueil.php");
-        
+        header("Location: templates/accueil.php");   
     } 
 ?>
