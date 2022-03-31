@@ -109,8 +109,8 @@
 </body>
 </html>
 <?php 
-    }else{
-        header("Location: ../templates/accueil.php");
-        
+    }
+    else{
+        header("Location: templates/accueil.php");
     } 
 ?>
