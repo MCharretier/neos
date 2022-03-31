@@ -133,8 +133,8 @@ nav ul {
 }
 
 .user img {
-    width: 15vw;
-    height: 15vw;
+    width: 17vw;
+    height: 17vw;
 }
 
 .info {
@@ -153,31 +153,32 @@ nav ul {
 
 .titre {
     font-family: 'Poppins';
-    font-size: 24px;
+    font-size: 2.2vw;
     color: rgba( 0, 0, 0, 0.7);
 }
 
 .text {
-    font-family: 'Poppins';
-    font-size: 34px;
+    font-family: 'Poppins bold';
+    font-size: 2.7vw;
 }
 
 .desc {
     display: flex;
     flex-direction: column;
-    height: 60%;
+    height: 65%;
 }
 
 .text_ita {
     font-family: "Poppins italic";
-    font-size: 22px;
+    font-size: 1.5vw;
     padding-top: 0.5vw;
+    overflow-wrap: break-word;
 }
 
 .abo {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: flex-end;
     width: 25vw;
     height: 100%;
@@ -185,7 +186,7 @@ nav ul {
 
 .stat {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end;
     width: 100%;
 }
@@ -204,7 +205,6 @@ nav ul {
 
 .bouton {
     display: flex;
-    margin-top: 50px;
     width: 100%;
     flex-direction: column;
     align-items: flex-end;
@@ -225,18 +225,18 @@ nav ul {
     margin-right: 50px;
     background: #119DA4;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.5vw;
     font-family: 'Poppins';
     font-size: 20px;
     color: #ffffff;
 }
 
 .autre {
-    height: 2vw;
-    width: 2vw;
+    height: 2.5vw;
+    width: 2.5vw;
     background: #119DA4;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5vw;
     font-family: 'Poppins';
     font-size: 20px;
     color: #ffffff;
@@ -453,6 +453,8 @@ button {
 
 footer {
     display: none;
+    position: fixed;
+    bottom: 0;
     height: 8vh;
     width: 100%;
     padding: 2vh 10vw;
@@ -479,4 +481,315 @@ footer img {
 
 @media screen and (max-width: 1200px) {
     
+    .user img {
+        height: 22vw;
+        width: 22vw;
+    }
+
+    .info {
+        height: auto;
+    }
+
+    .nom {
+        height: 40%;
+    }
+
+    .abo {
+        width: 30%;
+    }
+
+    .grand {
+        width: 150px;
+    }
+
+    .post {
+        height: 20vw;
+        width: 20vw;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .user img {
+        height: 28vw;
+        width: 28vw;
+    }
+
+    .info {
+        width: 25vw;
+    }
+
+    .nom {
+        height: 30%;
+    }
+
+    .titre {
+        font-size: 2.5vw;
+    }
+
+    .desc {
+        height: 70%;
+    }
+
+    .text_ita {
+        font-size: 16px;
+    }
+
+
+    .abo {
+        width: 25%;
+    }
+
+    .stat {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 2.2vw;
+    }
+
+    .grand {
+        height: 30px;
+        width: 130px;
+        font-size: 16px;
+    }
+
+    .autre {
+        height: 25px;
+        width: 25px;
+        font-size: 16px;
+    }
+
+    .post {
+        height: 25vw;
+        width: 25vw;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    header {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .corps {
+        width: 100%;
+        margin-left: 0;  
+    }
+
+    .corps .logo {
+        display: none;
+    }
+
+    .cadre {
+        height: 75vh;
+        width: 80%;
+        margin-top: 15vh;
+        border-right: #000000 solid 2px;
+        justify-content: space-between;
+    }
+
+    .user {
+        position: relative;
+    }
+
+    .info {
+        width: 60%;
+    }
+
+    .abo {
+        position: absolute;
+        bottom: -2vh;
+        flex-direction: row;
+        height: 20%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .stat {
+        flex-direction: row;
+    }
+
+    .stat span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .title {
+        padding-right: 2vw;
+    }
+
+    .collection {
+        height: 45%;
+    }
+
+    footer {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .user {
+        height: 45%;
+    }
+
+    .user img {
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .info {
+        width: 55%;
+    }
+
+    .nom {
+        height: 20%;
+    }
+
+    .desc {
+        height: 75%;
+    }
+
+    .abo {
+        bottom: -4vh;
+    }
+
+    .stat {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .post {
+        height: 30vw;
+        width: 30vw;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .user img {
+        height: 190px;
+        width: 190px;
+    }
+
+    .info {
+        height: 200px;
+        padding-left: 2vw;
+    }
+
+    .nom {
+        height: auto;
+    }
+
+    .abo {
+        bottom: -3vh;
+    }
+
+    .post {
+        height: 190px;
+        width: 190px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .user {
+        height: 40%;
+    }
+
+    .user img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .titre {
+        font-size: 16px
+    }
+
+    .text {
+        font-size: 16px
+    }
+
+    .abo {
+        flex-direction: column;
+        bottom: 0;
+    }
+
+    .stat {
+        align-items: start;
+    }
+
+    .collection {
+        height: 50%;
+    }
+
+    .post {
+        height: 220px;
+        width: 220px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .cadre {
+        height: 75 vh;
+    }
+
+    .user {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 55%;
+    }
+
+    .info {
+        width: 80%;
+    }
+
+    .nom {
+        flex-direction: row;
+        align-items: center;    
+    }
+
+    .titre {
+        margin-right: 20px;
+    }
+
+    .abo {
+        position: static;
+    }
+
+    .stat {
+        flex-direction: row;
+    }
+
+    .bouton button {
+        height: 30px;
+    }
+
+    .collection {
+        height: 42%;
+    }
+
+    .post {
+        height: 200px;
+        width: 200px;
+    }
+
 }
