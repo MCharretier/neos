@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    if (!empty($_SESSION)){
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -104,3 +108,9 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+<?php 
+    }else{
+        header("Location: ../templates/accueil.php");
+        
+    } 
+?>

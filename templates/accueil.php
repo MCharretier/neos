@@ -18,7 +18,7 @@
 
         <a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img src="../img/icone/photo_profil.svg" alt="Photo de votre profil"></a>
         <img class="logo" src="../img/logo/logo_fond_noir.png" alt="Logo Neos">
-        <a href=""><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
+        <a href="../templates/recherche.php"><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
 
     </header>
     <main>
@@ -27,18 +27,18 @@
             <ul>
                 <li class="active"><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href=""><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
+                <li><a href="../templates/recherche.php"><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
                 <li><div class="barre"></div></li>
                 <li><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
+                <li><a href="../templates/indispo.php"><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
                 <li><div class="barre"></div></li>
                 <li><a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img class="icone" src="../img/icone/profil.svg" alt="Lien vers la page de profil"></a></li>
             </ul>
             
         </nav>
         
-       <div class="corps">
+        <div class="corps">
 
             <img class="logo" src="../img/logo/logo_+_texte_noir.png" alt="Logo Neos">
 
@@ -46,18 +46,23 @@
 
                 <div class="carousel">
                     <?php 
-                    $query = $pdo->prepare("SELECT * FROM posts AS P ORDER BY id DESC");
-                    
+                    $query = $pdo->prepare("SELECT P.id AS pid,P.image AS pdp,P.title,P.hashtag,U.id,U.pseudo,U.image FROM posts AS P INNER JOIN users AS U ON U.id=P.user_id ORDER BY P.id DESC");
                     $query->execute();
                     $post =$query->fetchAll();                         
                     ?>  
                     <?php for($i=0; $i<count($post); $i++): ?> 
-                        <a href="../templates/post.php?id=<?=$post[$i]['id'];?>">
+                        <a href="../templates/post.php?id=<?=$post[$i]['pid'];?>">
                             <div class="post">
-                                <img class="nft" src="<?=$post[$i]['image'];?>" alt="NFT">
+                                <img class="nft" src="<?=$post[$i]['pdp'];?>" alt="NFT">
+                                
                                 <div class="marge">
                                     <div class="text">
-                                        <img class="pp" src="../img/icone/photo_profil.svg" alt="photo de profil">
+                                        <div  class="profil">
+                                            
+                                            <img class="pp" src="<?= $post[$i]['image'];?> " alt="photo de profil">
+                                            <p class="pseudo"><?=$post[$i]['pseudo'];?></p>
+                    
+                                        </div>
                                         <?php $title=explode(" ",$post[$i]['title']) ?>
                                         <?php if(count($title)>1 || strlen($post[$i]['title'])>10): ?>
 
@@ -97,7 +102,7 @@
         <ul>
             <li class="active"><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
             <li><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
-            <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
+            <li><a href="../templates/indispo.php"><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
         </ul>
 
     </footer>

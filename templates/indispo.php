@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/recherche.css">
+    <link rel="stylesheet" href="../style/indispo.css">
     <title>Accueil</title>
 </head>
 <body>
@@ -27,7 +27,7 @@
             <ul>
                 <li><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
                 <li><div class="barre"></div></li>
-                <li class="active"><a href="../templates/recherche.php"><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
+                <li><a href="../templates/recherche.php"><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
                 <li><div class="barre"></div></li>
                 <li><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
                 <li><div class="barre"></div></li>
@@ -40,26 +40,11 @@
                 
         <div class="corps">
 
-            <img class="logo" src="../img/logo/logo_+_texte_noir.png" alt="Logo Neos">
+            <img class="logo" src="../img/logo/logo_+_texte_blanc.png" alt="Logo Neos">
 
-            <form action="" method="post" class="recherche">
-                <h2>Pour trouver un contact c'est ici !</h2>
-                <input type="text" name="recherche" placeholder="Rechercher...">
-            </form>
-
-            <div class="liste">
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">paninikebap</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">bobylaloutre</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">bobylaloutre</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">bobylaloutre</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">mathischarretier</a>
-                <a href=""><img src="../img/avatars/unirex_shadow.svg" alt="user x">ptitcroc</a>
+            <div class="msg">
+                <h1>Un peu de patience cette page sera bientôt disponible</h1>
+                <a href="../templates/accueil.php">Retour à l'accueil</a>
             </div>
 
         </div>

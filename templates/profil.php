@@ -3,6 +3,15 @@
     require_once '../functions/pdo.php';
     if (!empty($_SESSION)){
         if ($_GET){
+            
+            $query = $pdo->prepare('SELECT image, pseudo, bio, nb_abonnes, nb_abonnement FROM users WHERE id=?;');
+            $query->bindValue(1, $_GET['id']);
+            $query->execute();
+            $user = $query->fetch();
+            if(!empty($user)){
+
+            
+            
 ?>
 
 <!DOCTYPE html>
@@ -22,11 +31,11 @@
             <ul>
                 <li><a href="../templates/accueil.php"><img class="icone" src="../img/icone/accueil.svg" alt="Lien vers la page d'accueil"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href=""><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
+                <li><a href="../templates/recherche.php"><img class="icone" src="../img/icone/recherche.svg" alt="Lien vers la page de recherche"></a></li>
                 <li><div class="barre"></div></li>
                 <li><a href="../templates/crea_post.php"><img class="icone" src="../img/icone/publier.svg" alt="Lien vers la page de publication"></a></li>
                 <li><div class="barre"></div></li>
-                <li><a href=""><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
+                <li><a href="../templates/indispo.php"><img class="icone" src="../img/icone/message.svg" alt="Lien vers la page de message"></a></li>
                 <li><div class="barre"></div></li>
                 <li class="active"><a href="../templates/profil.php?id=<?= $_SESSION['id']?>"><img class="icone" src="../img/icone/profil.svg" alt="Lien vers la page de profil"></a></li>
             </ul>
@@ -183,6 +192,9 @@
 </html>
 
 <?php
+        }else{
+            header('Location: accueil.php');
+        }
     }
     else {
         header('Location: accueil.php');

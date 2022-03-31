@@ -98,6 +98,38 @@ nav ul {
     width: 6vw;
 }
 
+.post_image{
+    position: relative;
+}
+.profil{
+    position: absolute;
+    top:0;
+    left:0;
+    padding:1vw 0 0 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    opacity: 0;
+    transition: 0.2s; 
+}
+
+.profil #pp{
+    margin-right: 1vw;
+    height: 4vw;
+    width: 4vw;
+}
+
+.pseudo{
+    font-family: "Poppins regular";
+    font-size: 2vw;
+    color:black;
+
+}
+
+.post_image:hover .profil{
+    opacity:1;
+}
+
 .corps {
     display: flex;
     flex-direction: column;
