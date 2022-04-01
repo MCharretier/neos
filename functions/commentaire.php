@@ -28,13 +28,13 @@ if($_POST){
      $query->bindValue(3,$comment);
      $query->execute();
 
-     $query = $pdo->prepare("SELECT U.pseudo FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id WHERE C.user_id =?");
+     $query = $pdo->prepare("SELECT U.pseudo, U.image, U.id FROM users AS U INNER JOIN comments AS C ON U.id = C.user_id WHERE C.user_id =?");
      $query->bindValue(1,$_SESSION['id']);
      $query->execute();
      $com =$query->fetch();
 
-     echo '<div class="barre"></div><div class="msg"><div class="user"><img src="../img/icone/photo_profil.svg" alt="Photo de profil de user4589">
-     <h2>'.$com['pseudo'].'</h2></div><p>'.$comment.'</p></div>';
+     echo '<div class="barre"></div><div class="msg"><a href="../templates/profil.php?id='.$com['id'].'" class="user"><img src="'.$com['image'].'" alt="Photo de profil de '.$com['pseudo'].'">
+     <h2>'.$com['pseudo'].'</h2></a><p>'.$comment.'</p></div>';
     } 
 }
 
