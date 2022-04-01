@@ -26,7 +26,8 @@
     <main>
 
         <?php 
-            $query = $pdo->prepare("SELECT image FROM users");
+            $query = $pdo->prepare("SELECT image FROM users WHERE id=?");
+            $query->bindValue(1, $_SESSION['id']);
             $query->execute();
             $nav_img =$query->fetch();                         
         ?>  
