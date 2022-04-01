@@ -19,7 +19,7 @@
     <header>
 
         <a href="../templates/profil.php?id=<?= $_SESSION["id"]?>"><img src="../img/icone/photo_profil.svg" alt="Photo de votre profil"></a>
-        <img class="logo" src="../img/logo/logo_fond_noir.png" alt="Logo Neos">
+        <a href="../templates/accueil.php"><img class="logo" src="../img/logo/logo_fond_noir.png" alt="Logo Neos"></a>
         <a href="../templates/recherche.php"><img src="../img/icone/recherche.svg" alt="Page recherche"></a>
 
     </header>
@@ -47,7 +47,7 @@
 
         <div class="corps">
 
-            <img class="logo" src="../img/logo/logo_+_texte_noir.png" alt="Logo Neos">
+            <a href="../templates/accueil.php"><img class="logo" src="../img/logo/logo_+_texte_noir.png" alt="Logo Neos"></a>
 
             <div class="cadre">
 
