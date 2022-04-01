@@ -232,11 +232,9 @@ footer {
     display: none;
     position: fixed;
     bottom: 0;
-    right: 0;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
-    padding: 0 10vw;
-    margin-bottom: 2vw;
+    padding: 2vh 10vw;
     background-color: #f6f6f6;
 }
 
@@ -277,6 +275,14 @@ footer img {
 
 }
 
+@media screen and (max-width: 1100px) {
+
+    .cadre {
+        height: 70%;
+    }
+
+}
+
 @media screen and (max-width: 1000px) {
 
     .corps {
@@ -286,6 +292,7 @@ footer img {
     .cadre {
         padding: 1vw;
         margin-top: 0;
+        height: 85%;
         width: 80%;
     }
 
@@ -339,6 +346,7 @@ footer img {
 
     main {
         justify-content: center;
+        align-items: center;
         height: 100%;
     }
 
@@ -348,10 +356,12 @@ footer img {
 
     .corps {
         justify-content: start;
+        margin-left: 0;
     }
 
     .cadre {
         width: 100%;
+        height: 70vh;
     }
 
     .corps .logo {
@@ -400,6 +410,10 @@ footer img {
 }
 
 @media screen and (max-width: 700px) {
+
+    .cadre {
+        height: 75vh;
+    }
 
     .import {
         height: 40vw;
@@ -475,6 +489,15 @@ footer img {
 
 @media screen and (max-width: 500px) {
 
+    main {
+        height: 85vh;
+    }
+
+    .cadre {
+        margin-top: 5vh;
+        height: 80%;
+    }
+
     .import {
         height: 70vw;
         width: 70vw;
@@ -514,7 +537,7 @@ footer img {
     }
 
     .info {
-        height: 60vw;
+        height: 80vw;
         width: 80vw;
     }
 

@@ -106,6 +106,7 @@ nav ul {
     flex-direction: column;
     align-items: center;
     width: 85%;
+    margin-left: 15%;
 }
 
 .logo {
@@ -205,6 +206,7 @@ footer img {
         height: calc(80vh - 2vw);
         width: 100%;
         justify-content: start;
+        margin-left: 0;
     }
 
     .corps .logo {
