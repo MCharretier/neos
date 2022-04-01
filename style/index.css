@@ -138,15 +138,12 @@ div#webgl {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    width: 35vw;
-    max-width: 1600px;
-    height: 90vh;
-    max-height: 800px;
+    width: 100vw;
+    height: 100vh;
     background-color: #ffffff;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
     z-index: 5;
     overflow: hidden;
@@ -181,16 +178,8 @@ div#webgl {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    height: 60vh;
-    width: 77%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    margin: 25px;
-}
-
-#form_login {
-    height: 50vh;
-    margin: 50px;
 }
 
 .close-btn {
@@ -205,22 +194,23 @@ div#webgl {
 
 .logo2 {
     opacity: 0;
-    width: 65%;
-    margin: 50px 0;
+    width: 400px;
+    /* margin: 50px 0; */
 }
 
 .form input {
     opacity: 0;
     height: 60px;
-    width: 27vw;
+    width: 400px;
     background: rgba(150, 150, 150, 0.2);
     border-radius: 10px;
     font-family: 'NiguellaDemo';
     font-size: 20px;
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.7);
-    padding: 30px 20px;
+    padding: 0.5rem 1rem;
     border-style: none;
+    margin: 0.5rem 0;
 }
 
 .alert {
@@ -239,8 +229,12 @@ div#webgl {
     margin: 0.5rem 0;
 }
 
+#login form {
+    transform: translateY(-100px);
+}
+
 .msg_alert {
-    width:75%;
+    width:400px;
 }
 
 .form label {
@@ -251,6 +245,8 @@ div#webgl {
 }
 
 .remind {
+    margin: 0.5rem 0;
+    width: 400px;
     display: flex;
     align-items: center;
 }
@@ -268,7 +264,7 @@ div#webgl {
 .form .btn {
     opacity: 0;
     height: 60px;
-    width: 27vw;
+    width: 400px;
     background: #119DA4;
     border-radius: 10px;
     font-family: 'NiguellaDemo';
@@ -278,6 +274,7 @@ div#webgl {
     align-items: center;
     border-style: none;
     cursor: pointer;
+    margin: 0.5rem 0;
 }
 
 .form .btn2 {
@@ -306,16 +303,6 @@ div#webgl {
     body {
         margin: 0;
     }
-    .logo {
-        width: 300px;
-    }
-    
-}
-
-@media screen and (max-width: 1300px) {
-    .popup {
-        width: 40vw;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -328,7 +315,7 @@ div#webgl {
         margin: 25px;
     }
 
-    .form input {
+    /* .form input {
         font-size: 18px;
     }
 
@@ -338,7 +325,7 @@ div#webgl {
 
     .form .btn2 {
         font-size: 20px;
-    }
+    } */
 }
 
 @media screen and (max-width: 1000px) {
@@ -347,12 +334,7 @@ div#webgl {
         width: 200px;
     }
 
-    .popup {
-        height: 70vh;
-        width: 400px;
-    }
-
-    .logo2 {
+    /* .logo2 {
         margin: 25px 0;
     }
 
@@ -374,6 +356,16 @@ div#webgl {
 
     .alert {
         font-size: 0.7rem;
+    } */
+}
+
+@media screen and (max-width: 600px) {
+    .logo2, .form input, .form .btn, .remind, .alert {
+        width: 300px;
+    }
+
+    .popup {
+        font-size: 16px;
     }
 }
 
@@ -387,12 +379,7 @@ div#webgl {
         flex-direction: column;
     }
 
-    .popup {
-        height: 65vh;
-        width: 350px;
-    }
-
-    .form {
+    /* .form {
         margin: 0;
         height: 50vh;
     }
@@ -420,15 +407,10 @@ div#webgl {
 
     .form .barre {
         width: 100px;
-    }
+    } */
 }
 
-@media screen and (max-width: 400px ) {
-
-    .popup {
-        height: 55vh;
-        width: 250px;
-    }
+/* @media screen and (max-width: 400px ) {
 
     .form {
         height: 40vh;
@@ -471,7 +453,7 @@ div#webgl {
         height: 15px;
         width: 15px;
     }
-}
+} */
 
 @media screen and (max-width: 350px) {
 

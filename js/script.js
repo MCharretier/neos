@@ -146,7 +146,7 @@ $("#form_register").submit(function(e){
             $(window).attr('location','templates/accueil.php')
         }
         else {
-            $('#register .msg_alert').append(data);
+            $('#register form').prepend(data);
         }
         
     })
@@ -168,7 +168,7 @@ $("#form_login").submit(function(e){
             $(window).attr('location','templates/accueil.php')
         }
         else {
-            $('#login .msg_alert').append(data);
+            $('#login form').prepend(data);
         }  
     })
     $(this)[0].reset();

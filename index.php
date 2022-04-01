@@ -55,11 +55,11 @@
 
                 <button type="submit" class="btn">connexion</button>
 
-                <div class="barre"></div>
+             <!--    <div class="barre"></div>
 
                 <label>Mot de passe oublié ?</label>
 
-                <button type="submit" class="btn2">inscription</button>
+                <button type="submit" class="btn2">inscription</button> -->
 
             </form>
 
@@ -96,9 +96,9 @@
 
                 <button type="submit" class="btn">inscription</button>
 
-                <div class="barre"></div>
+                <!-- <div class="barre"></div>
 
-                <button type="submit" class="btn2">connexion</button>
+                <button type="submit" class="btn2">connexion</button> -->
 
             </form>
         </div>
