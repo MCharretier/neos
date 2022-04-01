@@ -9,6 +9,7 @@
         }
     ],
     "require": {
-        "monolog/monolog": "^2.4"
+        "monolog/monolog": "^2.4",
+        "phpunit/php-timer": "^5.0"
     }
 }
